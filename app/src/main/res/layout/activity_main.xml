@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttonsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickBd"
+        android:text="স্বাধীন বাংলাদেশ" />
+
+    <Button
+        android:id="@+id/pk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="পাকিস্তানী শাসন" />
+
+    <Button
+        android:id="@+id/british"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="নবাব ও ব্রিটিশ শাসন" />
+
+    <Button
+        android:id="@+id/mughol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="পাখতুন ও মুঘল শাসন" />
+
+    <Button
+        android:id="@+id/middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="মধ্যযুগ ও ইসলামী শাসন" />
+
+    <Button
+        android:id="@+id/early"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="প্রাথমিক মধ্যযুগ" />
+
+    <Button
+        android:id="@+id/ancient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="প্রাচীন যুগ" />
+</LinearLayout>
