@@ -1,21 +1,42 @@
 apply plugin: 'com.android.application'
 
+ext{
+    versionMajor = 1    //modify for api level change
+    versionMinor = 0    //modify for additional features
+    versionPatch = 1    //modify for bug fixes
+    minSdkVersion = 15
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.sinbadsoftware.historyofbangladesh"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode generateVersionCode()
+        versionName generateVersionName()
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "History of Bangladesh_" + defaultConfig.versionName + ".apk"
+                }
+            }
         }
     }
+}
+
+private Integer generateVersionCode() {
+    return ext.minSdkVersion * 10000000 + ext.versionMajor * 10000 + ext.versionMinor * 100 + ext.versionPatch
+}
+
+private String generateVersionName() {
+    return "${versionMajor}.${versionMinor}.${versionPatch}"
 }
 
 dependencies {
